@@ -45,7 +45,8 @@ function fadeCat() {
   //TODO your function code here
   // toggle catImg fade
   // append '<p>fade toggle</p>' to 'clickList'
-
+  $('#catImg').fadeOut('slow', 0);
+  $('<p>fade toggle</p>').appendTo('#clickList');
 }
 
 // animateCat is a function to grow the cat's height and width by 10px when that button is clicked
@@ -53,6 +54,10 @@ function animateCat() {
   //TODO your function code here
   // animate catImg
   // append '<p>animate</p>' to 'clickList'
+  $('#catImg').animate({height: '600px', opacity: '0.5'}, 1500, function(){
+      $('#catImg').animate({height: '162px', opacity: '0.15'}, 'slow');
+      });
+  $('<p>animate</p>').appendTo('#clickList');
 }
 
 // PRO MODE
@@ -61,4 +66,6 @@ function animateCat() {
 function resetCat() {
   // reset catImg
   // append '<p>reset</p>' to 'clickList'
+  $('.navDiv').reset();
+  $('<p>reset</p>').appendTo('#clickList');
 }
