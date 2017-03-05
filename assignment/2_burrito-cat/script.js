@@ -11,6 +11,12 @@ $(document).ready(function() {
   $( '#hideDiv' ).on( 'click', function(){
     hideCat();
   });
+  $( '#animateDiv' ).on( 'click', function(){
+    animateCat();
+  });
+  $( '#resetDiv' ).on( 'click', function(){
+    resetCat();
+  });
 });
 
 // nav bar function to fade when mouse enters button
@@ -30,6 +36,8 @@ function hideCat() {
   //TODO your function code here
   // hide catImg
   // append '<p>hide toggle</p>' to 'clickList'
+  $('#catImg').hide();
+  $('<p>hide toggle</p>').appendTo('#clickList');
 }
 
 // fadeCat is a function to fade cat in or out when that button is clicked
