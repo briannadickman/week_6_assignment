@@ -66,6 +66,6 @@ function animateCat() {
 function resetCat() {
   // reset catImg
   // append '<p>reset</p>' to 'clickList'
-  $('.navDiv').reset();
+  $('#catImg').removeAttr('style');
   $('<p>reset</p>').appendTo('#clickList');
 }

@@ -2,7 +2,14 @@ console.log('Test Sourced');
 
 var onReady = function() {
   console.log('doc ready');
+  $( '.cardImg' ).hide();
   //TODO Add your code below to attach your event listeners to functions:
+$( 'cardDiv' ).on('click', function(){
+    revealHide();
+});
+$( 'cardDiv' ).on('click', function(){
+    singleClickFunc();
+});
 
 
 
@@ -19,7 +26,7 @@ $(document).ready(onReady);
 function revealHide() {
 
   //TODO add your code here to get the desired functionality
-
+  $( '.cardImg' ).show();
 }
 
 // singleClickFunc function hides and shows an indivdual card
