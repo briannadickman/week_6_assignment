@@ -4,16 +4,12 @@ var onReady = function() {
   console.log('doc ready');
   $( '.cardImg' ).hide();
   //TODO Add your code below to attach your event listeners to functions:
-$( 'cardDiv' ).on('click', function(){
+$( '#revealHide' ).on('click', function(){
+    console.log('Hide me!');
     revealHide();
 });
-$( 'cardDiv' ).on('click', function(){
-    singleClickFunc();
-});
 
-
-
-
+$( '.cardDiv' ).click(singleClickFunc);
 
 
 };
@@ -26,11 +22,12 @@ $(document).ready(onReady);
 function revealHide() {
 
   //TODO add your code here to get the desired functionality
-  $( '.cardImg' ).show();
+  $( '.cardImg' ).toggle();
 }
 
 // singleClickFunc function hides and shows an indivdual card
 function singleClickFunc() {
+        $(this).children().toggle();
 
   //TODO add your code here to get the desired functionality
 
